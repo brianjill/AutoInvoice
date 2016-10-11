@@ -1,0 +1,12 @@
+{
+  "description": "Automatic invoicing process done by EM",
+  "version": "2016.1.6101.26435",
+  "main": "Main.xaml",
+  "id": "AutoInvoice",
+  "dependencies": {},
+  "configurationOptions": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ]
+}
