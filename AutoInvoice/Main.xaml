@@ -91,7 +91,6 @@
                             <OutArgument x:TypeArguments="x:String">[ProjectName]</OutArgument>
                           </ui:GetRowItem.Value>
                         </ui:GetRowItem>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[ProjectName]" TopMost="True" />
                         <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="1" DisplayName="Get row item" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[rowConfig]">
                           <ui:GetRowItem.Value>
                             <OutArgument x:TypeArguments="x:String">[ProjectId]</OutArgument>
@@ -140,7 +139,7 @@
 Environment.NewLine]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[EmailBody +&#xD;&#xA;&quot;Please check this with your records in SAP and get back to me. &quot; +&#xD;&#xA;Environment.NewLine + Environment.NewLine +&#xD;&#xA;&quot;Best Regards, &quot; + &#xD;&#xA;Environment.NewLine +&#xD;&#xA;&quot;Capgemini Team&quot;]" DisplayName="Send Outlook Mail Message" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="[&quot;Hours in &quot; + ProjectName]" To="[Email]">
+                        <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[EmailBody +&#xA;&quot;Please check this with your records in SAP and get back to me. &quot; +&#xA;Environment.NewLine + Environment.NewLine +&#xA;&quot;Best Regards, &quot; + &#xA;Environment.NewLine +&#xA;&quot;Capgemini Team&quot;]" DisplayName="Send Outlook Mail Message" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="[&quot;Hours in &quot; + ProjectName]" To="[Email]">
                           <ui:SendOutlookMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                               <InArgument x:TypeArguments="x:String">[Path + "\"+ProjectName.Replace(" ","_")+"TotalHours.xlsx"]</InArgument>
@@ -259,7 +258,7 @@ Environment.NewLine]</InArgument>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
-    <sads:DebugSymbol.Symbol>d0REOlxVc2Vyc1xic2FyYW5kaVxEb2N1bWVudHNcR2l0SHViXEF1dG9JbnZvaWNlXEF1dG9JbnZvaWNlXE1haW4ueGFtbDI+A4cCDwIBAUU3RV4CAUxIDUipAQIBSEsRmQEhAgECSCdIMQIBSkhqSHYCAUlLKks0AgFGUReWASICAQNZGV0pAgFAXhlezwECAT1fGWMpAgE3ZBloKQIBMWkZbSkCAStuGXIpAgElcxl3KQIBH3gZfjECARd/GYQBMQIBEYUBGY4BIgIBDY8BGZUBLgIBBFtFW1ICAURZrgFZuwECAUJZXFlfAgFBXq4BXr0BAgE+YUVhUAIBO1+uAV+7AQIBOV9cX18CAThmRWZLAgE1ZK4BZLsBAgEzZFxkXwIBMmtFa0wCAS9prgFpuwECAS1pXGlfAgEscEVwUAIBKW6uAW67AQIBJ25cbl8CASZ1RXVQAgEjc64Bc7sBAgEhc1xzXwIBIHxWfGECAR16WHplAgEbe1F7VwIBGXjCAXjdAQIBGIIBWIIBZQIBFYEBUYEBVwIBE3/DAX/gAQIBEocBRYcBUAIBDo8BxgSPAc8EAgELkgFGkgGBAQIBCI8BjgGPAZMDAgEHjwGbBI8BwgQCAQU=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0REOlxVc2Vyc1xic2FyYW5kaVxEb2N1bWVudHNcR2l0SHViXEF1dG9JbnZvaWNlXEF1dG9JbnZvaWNlXE1haW4ueGFtbDA+A4YCDwIBAUU3RV4CAUlIDUipAQIBRUsRmAEhAgECSCdIMQIBR0hqSHYCAUZLKks0AgFDUReVASICAQNZGV0pAgE9XhliKQIBN2MZZykCATFoGWwpAgErbRlxKQIBJXIZdikCAR93GX0xAgEXfhmDATECARGEARmNASICAQ2OARmUAS4CAQRbRVtSAgFBWa4BWbsBAgE/WVxZXwIBPmBFYFACATtergFeuwECATleXF5fAgE4ZUVlSwIBNWOuAWO7AQIBM2NcY18CATJqRWpMAgEvaK4BaLsBAgEtaFxoXwIBLG9Fb1ACASltrgFtuwECASdtXG1fAgEmdEV0UAIBI3KuAXK7AQIBIXJccl8CASB7VnthAgEdeVh5ZQIBG3pRelcCARl3wgF33QECARiBAViBAWUCARWAAVGAAVcCARN+wwF+4AECARKGAUWGAVACAQ6OAa0EjgG2BAIBC5EBRpEBgQECAQiOAY4BjgH6AgIBB44BggSOAakEAgEF</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -271,7 +270,6 @@ Environment.NewLine]</InArgument>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="GetRowItem_4" sap:VirtualizedContainerService.HintSize="314,64" />
-      <sap2010:ViewStateData Id="MessageBox_2" sap:VirtualizedContainerService.HintSize="314,59" />
       <sap2010:ViewStateData Id="GetRowItem_5" sap:VirtualizedContainerService.HintSize="314,64" />
       <sap2010:ViewStateData Id="GetRowItem_6" sap:VirtualizedContainerService.HintSize="314,64" />
       <sap2010:ViewStateData Id="GetRowItem_7" sap:VirtualizedContainerService.HintSize="314,64" />
@@ -305,14 +303,14 @@ Environment.NewLine]</InArgument>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="336,1350">
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="336,1251">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEachRow_2" sap:VirtualizedContainerService.HintSize="366,1498">
+      <sap2010:ViewStateData Id="ForEachRow_2" sap:VirtualizedContainerService.HintSize="366,1399">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

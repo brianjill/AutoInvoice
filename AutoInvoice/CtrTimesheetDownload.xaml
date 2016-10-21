@@ -146,7 +146,7 @@
                     </ui:Click>
                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[projectId + &quot;[k(tab)]&quot;]">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7c0198da102e9d0e4771ba6aea2e36af" Selector="&lt;webctrl name='ProjectId' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ec4e8ea8663f53a2be216009a98089a8" Selector="&lt;webctrl name='ProjectId' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG  http://apps.ne.cap...'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -276,7 +276,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="414,2259">
+      <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="414,2019">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -310,7 +310,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CtrTimesheetDownload_1" sap:VirtualizedContainerService.HintSize="654,716" />
+      <sap2010:ViewStateData Id="CtrTimesheetDownload_1" sap:VirtualizedContainerService.HintSize="654,796" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
