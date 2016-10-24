@@ -77,7 +77,7 @@
     </Flowchart.Variables>
     <Flowchart.StartNode>
       <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_6">
-        <ui:ReadCsvFile DataTable="[EmployeeCTR]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="D:\jill\RPA\EM\Altibox.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+        <ui:ReadCsvFile DataTable="[EmployeeCTR]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="[path + &quot;\Altibox.csv&quot;]" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
         <FlowStep.Next>
           <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_7">
             <ui:BuildDataTable DataTable="[EmployeeWorkSum]" DisplayName="Build data table" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;WorkHour&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TotalWorkHour&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
@@ -225,7 +225,7 @@
                         </ui:ForEachRow>
                         <FlowStep.Next>
                           <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_10">
-                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel application scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="D:\jill\RPA\EM\AltiboxTotalHours.xlsx">
+                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel application scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[path+&quot;\AltiboxTotalHours.xlsx&quot;]">
                               <ui:ExcelApplicationScope.Body>
                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                   <ActivityAction.Argument>
@@ -255,32 +255,32 @@
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
-    <sads:DebugSymbol.Symbol>d1ZEOlxVc2Vyc1xic2FyYW5kaVxEb2N1bWVudHNcR2l0SHViXEF1dG9JbnZvaWNlXEF1dG9JbnZvaWNlXEV4dHJhY3RUaW1lUGVyRW1wbG95ZWUueGFtbExHA4MCDwIBAVAJULoBAgFjUw1T+QoCAWBWEV0aAgFcYBVnHgIBWGoZ4QEpAgEK5AEd7wE4AgECUCNQMgIBZVBrUIcBAgFkUypTPQIBYVs8W0oCAV9YPVhDAgFdZUFlRAIBW2JCYkgCAVlqMmpBAgFWcB/eASoCAQvkAbgB5AHfAQIBCeoBI+wBLgIBA3Eh3QEsAgEM6wEl6wHfAQIBBHcjezMCAVB8I4ABMwIBSoEBI4UBMwIBRIYBI9wBKAIBDesB2AHrAdwBAgEI6wFW6wFpAgEG6wHCAesBygECAQV5VnlkAgFUd7gBd8wBAgFSd2Z3aQIBUX5WfmACAU58uAF8zAECAUx8ZnxpAgFLgwFWgwFgAgFIgQG4AYEBzAECAUaBAWaBAWkCAUWGATGGAWQCAQ6IASeUATICATiXASfaASwCAQ+JASmTAS4CATmXATWXAVICARCZASuiATYCATOlASvYATYCARGJATeJAVQCATqLAS2RAUUCATyaAS2hATYCATSmAS3XATICARKNAWmNAW8CAUKPAXePAYgBAgFAiwHZAYsB8wECAT+OAWiOAW4CAT2fAVmfAXkCATecAVqcAWACATWmATumAVgCAROoATG6ATwCASa9ATHVATwCARWpATOpAfcBAgEvqgEzsQE8AgErsgEzuQE8AgEnvgEzxAFLAgEexQEzzAE8AgEazQEz1AE8AgEWqQGXAakBqgECATGpAV6pAYwBAgEwrwFerwFsAgEurAFfrAFlAgEstwFftwFiAgEqtAFgtAFmAgEowAFvwAF1AgEkwgF9wgGOAQIBIr4B3wG+AfkBAgEhwQFuwQF0AgEfygFeygFsAgEdxwFfxwFlAgEb0gFf0gF4AgEZzwFgzwFmAgEX</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>dzBEOlxST0JPVFxBdXRvSW52b2ljZVxFeHRyYWN0VGltZVBlckVtcGxveWVlLnhhbWxMRwODAg8CAQFQCVDBAQIBZFMNU/kKAgFhVhFdGgIBXWAVZx4CAVlqGeEBKQIBC+QBHe8BOAIBAlAjUDICAWdQa1COAQIBZVMqUz0CAWJbPFtKAgFgWD1YQwIBXmVBZUQCAVxiQmJIAgFaajJqQQIBV3Af3gEqAgEM5AG4AeQB5AECAQnqASPsAS4CAQNxId0BLAIBDesBJesB3wECAQR3I3szAgFRfCOAATMCAUuBASOFATMCAUWGASPcASgCAQ7rAdgB6wHcAQIBCOsBVusBaQIBBusBwgHrAcoBAgEFeVZ5ZAIBVXe4AXfMAQIBU3dmd2kCAVJ+Vn5gAgFPfLgBfMwBAgFNfGZ8aQIBTIMBVoMBYAIBSYEBuAGBAcwBAgFHgQFmgQFpAgFGhgExhgFkAgEPiAEnlAEyAgE5lwEn2gEsAgEQiQEpkwEuAgE6lwE1lwFSAgERmQErogE2AgE0pQEr2AE2AgESiQE3iQFUAgE7iwEtkQFFAgE9mgEtoQE2AgE1pgEt1wEyAgETjQFpjQFvAgFDjwF3jwGIAQIBQYsB2QGLAfMBAgFAjgFojgFuAgE+nwFZnwF5AgE4nAFanAFgAgE2pgE7pgFYAgEUqAExugE8AgEnvQEx1QE8AgEWqQEzqQH3AQIBMKoBM7EBPAIBLLIBM7kBPAIBKL4BM8QBSwIBH8UBM8wBPAIBG80BM9QBPAIBF6kBlwGpAaoBAgEyqQFeqQGMAQIBMa8BXq8BbAIBL6wBX6wBZQIBLbcBX7cBYgIBK7QBYLQBZgIBKcABb8ABdQIBJcIBfcIBjgECASO+Ad8BvgH5AQIBIsEBbsEBdAIBIMoBXsoBbAIBHscBX8cBZQIBHNIBX9IBeAIBGs8BYM8BZgIBGA==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="ReadCsvFile_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ReadCsvFile_1" sap:VirtualizedContainerService.HintSize="200,49">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BuildDataTable_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="BuildDataTable_1" sap:VirtualizedContainerService.HintSize="200,49">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,60">
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,59">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,60">
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,59">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,7 +369,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEachRow_2" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ForEachRow_2" sap:VirtualizedContainerService.HintSize="200,49">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -384,7 +384,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ExcelApplicationScope_1" sap:VirtualizedContainerService.HintSize="200,49">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,7 +395,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,544.5</av:Point>
-            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -403,8 +403,8 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,474.5</av:Point>
-            <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,525.5 300,544.5</av:PointCollection>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,523.5 300,544.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -412,7 +412,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">178.895,380</av:Point>
-            <av:Size x:Key="ShapeSize">242,60</av:Size>
+            <av:Size x:Key="ShapeSize">242,59</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">299.895,440 299.895,470 300,470 300,474.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -421,7 +421,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">179,280</av:Point>
-            <av:Size x:Key="ShapeSize">242,60</av:Size>
+            <av:Size x:Key="ShapeSize">242,59</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,340 300,370 299.895,370 299.895,380</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -430,8 +430,8 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,194.5</av:Point>
-            <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,245.5 300,280</av:PointCollection>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,243.5 300,280</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -439,8 +439,8 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
-            <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,194.5</av:PointCollection>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,163.5 300,194.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -455,7 +455,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExtractTimePerEmployee_1" sap:VirtualizedContainerService.HintSize="654,722" />
+      <sap2010:ViewStateData Id="ExtractTimePerEmployee_1" sap:VirtualizedContainerService.HintSize="654,1042" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
